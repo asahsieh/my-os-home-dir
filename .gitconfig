@@ -1,0 +1,13 @@
+[user]
+	email = kchs.tw@gmail.com
+	name = ASaHsieh
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff
+[color]
+	ui = true
+[alias]
+	st = status
+	co = checkout
+	ad = add
