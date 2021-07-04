@@ -1,6 +1,6 @@
 [user]
 	email = kchs.tw@gmail.com
-	name = ASaHsieh
+	name  = ASaHsieh
 [core]
 	editor = vim
 [merge]
@@ -8,6 +8,11 @@
 [color]
 	ui = true
 [alias]
-	st = status
-	co = checkout
-	ad = add
+	st    = status
+	ci    = commit
+	co    = checkout
+	ad    = add
+    br 	  = branch
+	lg 	  = log
+	graph = gh
+	df    = diff
