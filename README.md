@@ -4,18 +4,16 @@ My OS HomeDir
 My configration files and scripts
 
 ## Directory structure
-    - on_${specfic_OS_or_VM}
-      files for specific OS or VM
+    - dotfiles
+      Files for specific OS or VM
+      - ${specfic_OS_or_VM}
     - scripts
       - setup
-        scripts to initialize the system
-    - others
-      the files can be used across different OS
-
+        Scripts to initialize the system
+        - ${specfic_OS_or_VM}
 ## Usage
-    - copy files in `on_${specfic_OS_or_VM}` and dot files to home dir
-      if there has match with the system
-    - execute preferred scripts in `scripts`
+    - Copy dot files in `dofiles/on_${specfic_OS_or_VM}` under home dir
+    - Go to sub-directory under `scripts` for your goal and execute the scripts 
 
 ## Future work
     - automatically detect the system and do the steps in **Usage**
