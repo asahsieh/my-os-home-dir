@@ -12,7 +12,7 @@
 	ci    = commit
 	co    = checkout
 	ad    = add
-    br 	  = branch
-	lg 	  = log
+	br    = branch
+	lg    = log
 	graph = gh
 	df    = diff
