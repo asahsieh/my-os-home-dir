@@ -2,7 +2,6 @@
 " My configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-
 """""""""""""""""""""""""""""""""
 "" => Install Plugins by vim-plug
 """""""""""""""""""""""""""""""""
@@ -40,3 +39,8 @@ call plug#end()
       !echo 'Install Plugins by Snap'
       silent !sudo snap install universal-ctags
     endif
+
+"""""""""""""""""""""""""""""""""""""""""""
+" => Set Shortcuts of Plugins 
+"""""""""""""""""""""""""""""""""""""""""""
+nmap <F7> :TrinityToggleAll
