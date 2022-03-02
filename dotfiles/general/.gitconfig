@@ -9,7 +9,7 @@
 	ui = true
 [alias]
 	st    = status
-	ci    = commit
+	cm    = commit
 	co    = checkout
 	ad    = add
 	br    = branch
