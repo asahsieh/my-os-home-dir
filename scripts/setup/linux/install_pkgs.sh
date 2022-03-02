@@ -8,6 +8,9 @@ sudo apt-get install git
 sudo apt-get install vim
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
+### install plugin manager
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Sync personal setting
 git clone https://github.com/asahsieh/my-os-home-dir.git ~/Documents/GIT_dbs/my-os-home-dir
