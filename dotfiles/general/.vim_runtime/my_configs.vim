@@ -44,3 +44,13 @@ call plug#end()
 " => Set Shortcuts of Plugins 
 """""""""""""""""""""""""""""""""""""""""""
 nmap <F7> :TrinityToggleAll
+
+"""""""""""""""""""""""""""""""""""""""""""
+" => My VIM settings
+"""""""""""""""""""""""""""""""""""""""""""
+set nu
+
+" Key maps for copying text to the system clipboard
+inoremap <C-v> <ESC>"+pa
+vnoremap <C-c> "+y
+vnoremap <C-d> "+d
