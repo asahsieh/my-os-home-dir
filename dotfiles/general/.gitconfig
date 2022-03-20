@@ -1,18 +1,19 @@
 [user]
-	email = kchs.tw@gmail.com
-	name  = ASaHsieh
+	email   = kchs.tw@gmail.com
+	name    = ASaHsieh
 [core]
-	editor = vim
+	editor  = vim
 [merge]
-	tool = vimdiff
+	tool    = meld
 [color]
-	ui = true
+	ui      = true
 [alias]
-	st    = status
-	cm    = commit
-	co    = checkout
-	ad    = add
-	br    = branch
-	lg    = log
-	graph = gh
-	df    = diff
+	st      = status
+	cm      = commit
+	co      = checkout
+	ad      = add
+	rs      = restore
+	br      = branch
+	lg      = log
+	graph   = gh
+	df      = diff
