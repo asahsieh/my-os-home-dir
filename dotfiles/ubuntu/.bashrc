@@ -57,12 +57,12 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\][\A] \[\033[00;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\][\A] \[\033[00;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
     # modified by Kyle
     # The \e0m at the end resets the color back to default.
     #
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\][\A] \[\033[00;32m\]\u@\h\[\033[01;37m\]:\[\033[00;34m\]\w\[\033[00;33m\]\$\[\033[0m\] '
+    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\][\A] \[\033[00;32m\]\u@\h\[\033[01;37m\]:\[\033[00;34m\]\w\[\033[00;33m\]\$\[\033[0m\] '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi

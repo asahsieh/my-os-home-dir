@@ -13,4 +13,5 @@ alias l.='ls -d .* --color=auto'
 
 alias byo='byobu'
 
-alias go_act_path='c ~/courses/linux-kernel-internals/practice/c_lang/pointer'
+alias act_path='c ~/courses/linux-kernel-internals/practice/c_lang/pointer'
+alias linux2022='c /home/asahsieh/Documents/Courses/Linux_Kernel_Design/linux2022'
