@@ -54,3 +54,32 @@ set nu
 inoremap <C-v> <ESC>"+pa
 vnoremap <C-c> "+y
 vnoremap <C-d> "+d
+
+" Open a file at right side by vsplit
+set splitright
+
+"""""""""""""""""""""""""""""""""""""""""""
+" => My VIM settings for coding
+"""""""""""""""""""""""""""""""""""""""""""
+" Integrate `clang-format` to `vim`
+function! Formatonsave()
+  let l:formatdiff = 1
+  py3f /usr/share/vim/addons/syntax/clang-format.py
+endfunction
+autocmd BufWritePre *.h,*.hpp,*.c,*.cc,*.cpp call Formatonsave()
+
+" make a vertical column in the background at 80 characters
+set colorcolumn=80
+
+" make it black in Graphical Vims (my vim background is dark gray) see help 
+" gui-colors for a list of suggseted color names
+" see help guibg for how to specific specific rgb / hex colors
+highlight ColorColumn guibg=Red
+
+" make it black in terminal vims (my terminal vim looks the same as my GUI vim)
+" see :help ctermbg for a list of colors that can be used in the terminal
+highlight ColorColumn ctermbg=Red
+
+" Automatic word wrapping on 80-characters for coding rule on the Linux course
+" Note: Auto-wrap needs one blank to seperate last two words in line of text
+set tw=80
