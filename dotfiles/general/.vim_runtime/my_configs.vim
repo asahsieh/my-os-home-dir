@@ -68,6 +68,12 @@ function! Formatonsave()
 endfunction
 autocmd BufWritePre *.h,*.hpp,*.c,*.cc,*.cpp call Formatonsave()
 
+" Automatically removing all trailing whitespace:
+" https://vim.fandom.com/wiki/Remove_unwanted_spaces#Automatically_removing_all_trailing_whitespace
+"
+" TODO: add the function to clang-format.py
+autocmd BufWritePre *.h,*.hpp,*.c,*.cc,*.cpp call CleanExtraSpaces()
+
 " make a vertical column in the background at 80 characters
 set colorcolumn=80
 
