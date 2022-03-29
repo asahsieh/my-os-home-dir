@@ -43,7 +43,20 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""
 " => Set Shortcuts of Plugins 
 """""""""""""""""""""""""""""""""""""""""""
-nmap <F7> :TrinityToggleAll
+" Trinity:
+" Open and close all the three plugins on the same time
+nmap <C-F7> :TrinityToggleAll<CR>
+" Open and close the srcexpl.vim separately
+nmap <C-F9> :TrinityToggleSourceExplorer<CR>
+" Open and close the taglist.vim separately
+nmap <C-F10> :TrinityToggleTagList<CR>
+" Open and close the NERD_tree.vim separately
+nmap <C-F11> :TrinityToggleNERDTree<CR>"
+
+" ctags:
+" (TODO) create abbreviation for the following user-input command
+" :ctags -R --exclude=.svn
+set tags=./tags,./TAGS,tags;~,TAGS;~
 
 """""""""""""""""""""""""""""""""""""""""""
 " => My VIM settings
@@ -57,6 +70,11 @@ vnoremap <C-d> "+d
 
 " Open a file at right side by vsplit
 set splitright
+
+" Set mouse mode to resize splits
+set mouse=n
+"   Inside tmux
+set ttymouse=xterm2
 
 """""""""""""""""""""""""""""""""""""""""""
 " => My VIM settings for coding
