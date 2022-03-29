@@ -13,6 +13,7 @@
 	co      = checkout
 	ad      = add
 	rs      = restore
+	rst     = reset
 	br      = branch
 	lg      = log
 	graph   = gh
