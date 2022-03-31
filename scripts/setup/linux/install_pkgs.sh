@@ -5,7 +5,8 @@ sudo apt-get update
 sudo apt-get install git
 
 ## VIM
-sudo apt-get install vim
+sudo apt install vim
+sudo apt install cscope
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 ### install plugin manager
