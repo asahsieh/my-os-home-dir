@@ -51,12 +51,16 @@ nmap <C-F9> :TrinityToggleSourceExplorer<CR>
 " Open and close the taglist.vim separately
 nmap <C-F10> :TrinityToggleTagList<CR>
 " Open and close the NERD_tree.vim separately
-nmap <C-F11> :TrinityToggleNERDTree<CR>"
+nmap <C-F11> :TrinityToggleNERDTree<CR>
 
 " ctags:
 " (TODO) create abbreviation for the following user-input command
-" :ctags -R --exclude=.svn
+" :!ctags -R --exclude=.svn
 set tags=./tags,./TAGS,tags;~,TAGS;~
+
+" cscope:
+" (TODO) create abbreviation for the following user-input command
+" :!cscope -Rbkq
 
 """""""""""""""""""""""""""""""""""""""""""
 " => My VIM settings
@@ -67,6 +71,9 @@ set nu
 inoremap <C-v> <ESC>"+pa
 vnoremap <C-c> "+y
 vnoremap <C-d> "+d
+
+" Key map for saving file content
+map <leader>wq :wq<cr>
 
 " Open a file at right side by vsplit
 set splitright
