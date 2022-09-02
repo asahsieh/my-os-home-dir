@@ -18,3 +18,8 @@
 	lg      = log
 	graph   = gh
 	df      = diff
+	rb      = rebase
+[credential]
+    credentialStore = cache
+[init]
+    defaultBranch = master
