@@ -89,15 +89,15 @@ set ttymouse=xterm2
 " Integrate `clang-format` to `vim`
 function! Formatonsave()
   let l:formatdiff = 1
+  " FIX-ME:
+  "     with open(vim.current.buffer.name, 'r') as f:
+  "     FileNotFoundError: [Errno 2] No such file or directory:
+  "
+  "     reference the lecture for more information:
+  "     https://www.udemy.com/course/100-days-of-code/learn/lecture/20532962#overview
   py3f /usr/share/vim/addons/syntax/clang-format.py
 endfunction
 autocmd BufWritePre *.h,*.hpp,*.c,*.cc,*.cpp call Formatonsave()
-
-" Automatically removing all trailing whitespace:
-" https://vim.fandom.com/wiki/Remove_unwanted_spaces#Automatically_removing_all_trailing_whitespace
-"
-" TODO: add the function to clang-format.py
-autocmd BufWritePre *.h,*.hpp,*.c,*.cc,*.cpp call CleanExtraSpaces()
 
 " make a vertical column in the background at 80 characters
 set colorcolumn=80
