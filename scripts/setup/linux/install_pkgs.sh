@@ -16,7 +16,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 # Sync personal setting
 git clone https://github.com/asahsieh/my-os-home-dir.git ~/Documents/GIT_dbs/my-os-home-dir
 # Copy the setting to local machine
-cp -r ~/Documents/GIT_dbs/my-os-home-dir/dotfiles/general/.[^...]* ~/
+cp -r ~/Documents/GIT_dbs/my-os-home-dir/Dotfiles/general/.[^...]* ~/
 # Create links to replace the original setting
 mv ~/.bashrc ~/.bashrc.bak
 mv ~/.bash_aliases ~/.bash_aliases.bak
@@ -26,10 +26,11 @@ fi
 if [[ -e  ~/.vim_runtime/my_configs.vim ]]; then
     mv ~/.vim_runtime/my_configs.vim ~/.vim_runtime/my_configs.vim.bak
 fi
-ln -s ~/Documents/GIT_dbs/my-os-home-dir/dotfiles/ubuntu/.bashrc ~/.bashrc
-ln -s ~/Documents/GIT_dbs/my-os-home-dir/dotfiles/ubuntu/.bash_aliases ~/.bash_aliases
-ln -s ~/Documents/GIT_dbs/my-os-home-dir/dotfiles/general/.gitconfig ~/.gitconfig
-ln -s ~/Documents/GIT_dbs/my-os-home-dir/dotfiles/general/.vim_runtime/my_configs.vim ~/.vim_runtime/my_configs.vim
+ln -s ~/Documents/GIT_dbs/my-os-home-dir/Dotfiles/ubuntu/.bashrc ~/.bashrc
+ln -s ~/Documents/GIT_dbs/my-os-home-dir/Dotfiles/ubuntu/.bash_aliases ~/.bash_aliases
+ln -s ~/Documents/GIT_dbs/my-os-home-dir/Dotfiles/general/.gitconfig ~/.gitconfig
+ln -s ~/Documents/GIT_dbs/my-os-home-dir/Dotfiles/general/.vim_runtime/my_configs.vim ~/.vim_runtime/my_configs.vim
+ln -s ~/Documents/GIT_dbs/my-os-home-dir/Scripts ~/Scripts
 
 # Other utilites: uncomment the commands (the line with prefix "###") if you want to install the utilites
 ## Install a Window manager and terminal multiplexer
