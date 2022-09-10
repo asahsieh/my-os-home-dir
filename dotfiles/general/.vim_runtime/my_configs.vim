@@ -27,6 +27,13 @@ Plug 'preservim/nerdtree'
 Plug 'wesleyche/SrcExpl'
 Plug 'wesleyche/Trinity'
 
+" Vim Syntax Plugin for Verilog and SystemVerilog
+Plug 'vhda/verilog_systemverilog.vim'
+Plug 'vimtaku/hl_matchit.vim'
+Plug 'ervandew/supertab'
+Plug 'preservim/tagbar'
+Plug 'Konfekt/FastFold'
+
 " Initialize plugin system
 call plug#end()
 
@@ -114,3 +121,42 @@ highlight ColorColumn ctermbg=Red
 " Automatic word wrapping on 80-characters for coding rule on the Linux course
 " Note: Auto-wrap needs one blank to seperate last two words in line of text
 set tw=80
+
+"""""""""""""""""""""""""""""""""""""""""""
+" => Settings for Vim Syntax Plugin for Verilog and SystemVerilog
+"""""""""""""""""""""""""""""""""""""""""""
+" Automatic folding by syntax
+set foldmethod=syntax
+
+" Other Vim addons helpful for Verilog/SystemVerilog
+" Matchit
+runtime macros/matchit.vim
+
+" Highlight Matchit
+"" If this variable is set, augroup is defined, and start highlighting.
+let g:hl_matchit_enable_on_vim_startup = 1
+
+"" you can specify highlight group. see :highlight
+let g:hl_matchit_hl_groupname = 'Search'
+
+"" I recomend  g:hl_matchit_speed_level = 1 because highlight is
+"" just an addition.
+"" If 1 is set, sometimes do not highlight.
+let g:hl_matchit_speed_level = 1 " or 2
+
+"" you can specify use hl_matchit filetype.
+let g:hl_matchit_allow_ft = 'html,vim,sh,sv,svh,v' " blah..blah..
+
+" Supertab
+let g:SuperTabDefaultCompletionType = 'context'
+
+" Tagbar
+let g:tagbar_position = 'leftabove vertical'
+"" for permission issue on /tmp
+let $TMPDIR=$HOME . '/tmp'
+
+" FastFold: improve the performance on automatic folds
+nmap zuz <Plug>(FastFoldUpdate)
+let g:fastfold_savehook = 1
+let g:fastfold_fold_command_suffixes =  ['x','X','a','A','o','O','c','C']
+let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']']
