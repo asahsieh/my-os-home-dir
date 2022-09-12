@@ -56,15 +56,26 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+# Git in Bash:
+#   ref.: https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash
+#
+if [ -f ~/Scripts/git-completion.bash ]; then
+    . ~/Scripts/git-completion.bash
+fi
+if [ -f ~/Scripts/git-prompt.sh ]; then
+    . ~/Scripts/git-prompt.sh
+    export GIT_PS1_SHOWDIRTYSTATE=1
+fi
+
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\][\A] \[\033[00;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\][\A] \[\033[00;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ $(__git_ps1 "(%s) ")'
 
     # modified by Kyle
     # The \e0m at the end resets the color back to default.
     #
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\][\A] \[\033[00;32m\]\u@\h\[\033[01;37m\]:\[\033[00;34m\]\w\[\033[00;33m\]\$\[\033[0m\] '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ $(__git_ps1 "(%s) ")'
 fi
 unset color_prompt force_color_prompt
 
@@ -124,16 +135,3 @@ fi
 # Locally-added statements
 #byobu
 export PATH=/snap/bin:$PATH
-
-# Git in Bash:
-# https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash
-if [ -f ~/Scripts/git-completion.bash ]; then
-    . ~/Scripts/git-completion.bash
-fi
-if [ -f ~/Scripts/git-prompt.sh ]; then
-    . ~/Scripts/git-prompt.sh
-    export GIT_PS1_SHOWDIRTYSTATE=1
-    export PS1="$PS1$(__git_ps1 "(%s)")\$ "
-else
-    export PS1="$PS1\$ "
-fi
