@@ -9,7 +9,7 @@ My configration files and scripts
       - ${specfic_OS_or_VM}
     - Scripts
       A folder contains referenced scripts
-    - scripts
+    - scripts_for_certain_purpose
       - setup
         Scripts to initialize the system
         - ${specfic_OS_or_VM}
