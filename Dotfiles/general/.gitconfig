@@ -3,6 +3,7 @@
 	name    = ASaHsieh
 [core]
 	editor  = vim
+	excludesfile = /home/asahsieh/.gitignore_global
 [merge]
 	tool    = meld
 [color]
