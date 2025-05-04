@@ -1,9 +1,9 @@
 [user]
 	email   = kchs.tw@gmail.com
-	name    = ASaHsieh
+	name    = asahsieh
 [core]
 	editor  = vim
-	excludesfile = /home/asahsieh/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [merge]
 	tool    = meld
 [color]
@@ -21,6 +21,6 @@
 	df      = diff
 	rb      = rebase
 [credential]
-    credentialStore = cache
+	credentialStore = cache
 [init]
-    defaultBranch = master
+	defaultBranch = master
